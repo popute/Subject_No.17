@@ -23,7 +23,7 @@ public class ClickTextAdvance : MonoBehaviour
 
         // 改行で分割し、空行を除外
         var raw = textAsset.text.Replace("\r\n", "\n").Replace("\r", "\n");
-        lines = raw.Split(new[] { '\n' }, System.StringSplitOptions.RemoveEmptyEntries);
+        lines = raw.Split(new[] { '\n' });
 
         textLabel.text = "";  // 初期は空
         AppendLine();         // 最初の1行を表示
@@ -44,7 +44,7 @@ public class ClickTextAdvance : MonoBehaviour
 
     private void AppendLine()
     {
-        string add = lines[index].Trim();
+        string add = lines[index];
         if (string.IsNullOrEmpty(textLabel.text))
             textLabel.text = add;       // 1行目
         else
