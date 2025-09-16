@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickTextAdvance
   textLabel: {fileID: 857100080}
-  textAsset: {fileID: 4900000, guid: 90635b6b68be9484cb614d50f7da2e37, type: 3}
+  provider: {fileID: 1104581800}
   onTextFinished:
     m_PersistentCalls:
       m_Calls:
@@ -587,8 +587,9 @@ GameObject:
   - component: {fileID: 1104581799}
   - component: {fileID: 1104581798}
   - component: {fileID: 1104581797}
+  - component: {fileID: 1104581800}
   m_Layer: 0
-  m_Name: SceneMove
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -671,6 +672,75 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1104581796}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 468.11865, y: 373.9319, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1104581800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104581796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3cf7d23a86a21847bf95c861eb45aa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CSVLoader
+  csvFiles:
+  - {fileID: 4900000, guid: 57942a891acf2ec4d8e4ad45dfe03c70, type: 3}
+  - {fileID: 4900000, guid: c8078989d10cc904094693d65b249711, type: 3}
+  - {fileID: 4900000, guid: aeb415e3fdad3a04184d30c76aa8fced, type: 3}
+  - {fileID: 4900000, guid: 3833ba57ca741644e8b41ee2cafedae4, type: 3}
+  - {fileID: 4900000, guid: c84de542bb15538469c5f0a602ba36b9, type: 3}
+  - {fileID: 4900000, guid: cc049105fae71074898d5f0a2f637f62, type: 3}
+  - {fileID: 4900000, guid: c557d212f27fc0f4bb4453019e6e68ef, type: 3}
+  - {fileID: 4900000, guid: 4289e32c1c48940419e78e733b11000a, type: 3}
+  - {fileID: 4900000, guid: 3c704ba5a0b6b344698323b6fd9eba8f, type: 3}
+  - {fileID: 4900000, guid: 104aa1eb70f33af489c4311b3ffa23da, type: 3}
+  - {fileID: 4900000, guid: 968ab377687aac44f83cc9c9149a1e1e, type: 3}
+--- !u!1 &2018153411
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2018153413}
+  - component: {fileID: 2018153412}
+  m_Layer: 0
+  m_Name: DayCount
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2018153412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018153411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4208045593281704fbc73c34d083f5fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DayCount
+  dayCount: 0
+--- !u!4 &2018153413
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018153411}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 468.11865, y: 373.9319, z: 0}
@@ -881,3 +951,4 @@ SceneRoots:
   - {fileID: 2108577569}
   - {fileID: 1086878861}
   - {fileID: 1104581799}
+  - {fileID: 2018153413}
