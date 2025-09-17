@@ -198,6 +198,107 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 105602193}
   m_CullTransparentMesh: 1
+--- !u!1 &107479398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 107479400}
+  - component: {fileID: 107479399}
+  - component: {fileID: 107479401}
+  m_Layer: 0
+  m_Name: StatusManage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &107479399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107479398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd180c14f5643b54c8ffefe9891705b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnAction
+  vegetablesH: 4
+  vegetablesM: 1
+  vegetablesT: 1
+  vegetablesU: 1
+  animalH: 10
+  animalM: -6
+  animalT: -5
+  animalU: -2
+  snackH: 1
+  snackM: 5
+  snackT: 4
+  snackU: -2
+  subjectCleanH: 2
+  subjectCleanM: 4
+  subjectCleanT: 1
+  subjectCleanU: 1
+  roomCleanH: 2
+  roomCleanM: 8
+  roomCleanT: 3
+  roomCleanU: 1
+  presentH: 0
+  presentM: 2
+  presentT: 10
+  presentU: -2
+  talkH: 0
+  talkM: 3
+  talkT: 4
+  talkU: 1
+  administrativeH: 0
+  administrativeM: -2
+  administrativeT: -2
+  administrativeU: 4
+  bloodH: -6
+  bloodM: -5
+  bloodT: -5
+  bloodU: 10
+  excrementH: -3
+  excrementM: -3
+  excrementT: -1
+  excrementU: 6
+  spitH: -1
+  spitM: -1
+  spitT: -1
+  spitU: 4
+--- !u!4 &107479400
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107479398}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 468.11865, y: 373.9319, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &107479401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107479398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a0190ccd53c4df4e875111c25298a5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SubjectStatu
 --- !u!1 &141022386
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,7 +381,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 141022389}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 107479399}
+        m_TargetAssemblyTypeName: OnAction, Assembly-CSharp
+        m_MethodName: SubjectClean
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &141022389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -638,7 +751,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 250579941}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 107479399}
+        m_TargetAssemblyTypeName: OnAction, Assembly-CSharp
+        m_MethodName: Administrative
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &250579941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1007,7 +1132,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 684395835}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 107479399}
+        m_TargetAssemblyTypeName: OnAction, Assembly-CSharp
+        m_MethodName: Excrement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &684395835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1128,7 +1265,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 780708809}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 107479399}
+        m_TargetAssemblyTypeName: OnAction, Assembly-CSharp
+        m_MethodName: Present
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &780708809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1249,7 +1398,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 987570086}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 107479399}
+        m_TargetAssemblyTypeName: OnAction, Assembly-CSharp
+        m_MethodName: Blood
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &987570086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1523,7 +1684,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1068829546}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 107479399}
+        m_TargetAssemblyTypeName: OnAction, Assembly-CSharp
+        m_MethodName: RoomClean
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1068829546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2051,7 +2224,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1415094815}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 107479399}
+        m_TargetAssemblyTypeName: OnAction, Assembly-CSharp
+        m_MethodName: Vegetables
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1415094815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2172,7 +2357,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1426626046}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 107479399}
+        m_TargetAssemblyTypeName: OnAction, Assembly-CSharp
+        m_MethodName: Animal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1426626046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3002,7 +3199,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1842920026}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 107479399}
+        m_TargetAssemblyTypeName: OnAction, Assembly-CSharp
+        m_MethodName: Talk
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1842920026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3123,7 +3332,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1844842760}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 107479399}
+        m_TargetAssemblyTypeName: OnAction, Assembly-CSharp
+        m_MethodName: Snack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1844842760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3334,7 +3555,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1901393159}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 107479399}
+        m_TargetAssemblyTypeName: OnAction, Assembly-CSharp
+        m_MethodName: Spit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1901393159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3806,3 +4039,4 @@ SceneRoots:
   - {fileID: 2013602340}
   - {fileID: 1071009827}
   - {fileID: 992356670}
+  - {fileID: 107479400}
