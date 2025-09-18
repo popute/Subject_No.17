@@ -24,8 +24,18 @@ public class ClickTextAdvance : MonoBehaviour
 
     void Start()
     {
-        ChangeText();
+        var scene = SceneManager.GetActiveScene();
 
+        if (scene.name == "TextScene") // ← 特定シーン名を指定
+        {
+            // シーン起動時の処理
+            ChangeText();
+        }
+        if (scene.name == "TalkScene") // ← 特定シーン名を指定
+        {
+            // シーン起動時の処理
+            ChangeTalk();
+        }
         textLabel.text = "";  // 初期は空
         AppendLine();         // 最初の1行を表示
     }
@@ -68,6 +78,45 @@ public class ClickTextAdvance : MonoBehaviour
         {
             SceneManager.LoadScene("TitleScene");
         } 
+    }
+    void ChangeTalk()
+    {
+        if (day.dayCount == 1)
+        {
+            lines = provider.GetLines("day1_talk");
+        }
+        else if (day.dayCount == 2)
+        {
+            lines = provider.GetLines("day2_talk");
+        }
+        else if (day.dayCount == 3)
+        {
+            lines = provider.GetLines("dayElse_talk");
+        }
+        else if (day.dayCount == 4)
+        {
+            lines = provider.GetLines("dayElse_talk");
+        }
+        else if (day.dayCount == 5)
+        {
+            lines = provider.GetLines("day5_talk");
+        }
+        else if (day.dayCount == 6)
+        {
+            lines = provider.GetLines("dayElse_talk");
+        }
+        else if (day.dayCount == 7)
+        {
+            lines = provider.GetLines("dayElse_talk");
+        }
+        else if (day.dayCount == 8)
+        {
+            lines = provider.GetLines("dayElse_talk");
+        }
+        else
+        {
+            Debug.Log("うぇい");
+        }
     }
 
     public void Advance()

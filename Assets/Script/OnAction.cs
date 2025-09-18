@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class OnAction : MonoBehaviour
 {
+    public static OnAction Instance { get; private set; }
+
+    
     public int vegetablesH;
     public int vegetablesM;
     public int vegetablesT;

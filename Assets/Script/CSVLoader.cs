@@ -22,4 +22,8 @@ public class CSVLoader : MonoBehaviour
     {
         return dict.TryGetValue(key, out var lines) ? lines : null;
     }
+    public string[] GetLines2(string key)
+    {
+        return dict.TryGetValue(key, out var lines) ? lines : null;
+    }
 }

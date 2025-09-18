@@ -29,11 +29,12 @@ public class SubjectStatu : MonoBehaviour
         {
             status[type] += value;
             Debug.Log($"{type} に {value} 加算 → 現在 {status[type]}");
+        Debug.Log($"H={status['H']}, M={status['M']}, T={status['T']}, U={status['U']}");
+
         }
         else
         {
             Debug.LogWarning($"未定義のタイプ {type} にアクセスしました");
         }
-        Debug.Log($"H={status['H']}, M={status['M']}, T={status['T']}, U={status['U']}");
     }
 }
