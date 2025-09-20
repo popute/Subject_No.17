@@ -64,80 +64,80 @@ public class OnAction : MonoBehaviour
 
     public void Vegetables()//食事
     {
-        SubjectStatu.Instance.AddScore('H', vegetablesH);
-        SubjectStatu.Instance.AddScore('M', vegetablesM);
-        SubjectStatu.Instance.AddScore('T', vegetablesT);
-        SubjectStatu.Instance.AddScore('U', vegetablesU);
+        SubjectStatus.Instance.AddScore('H', vegetablesH);
+        SubjectStatus.Instance.AddScore('M', vegetablesM);
+        SubjectStatus.Instance.AddScore('T', vegetablesT);
+        SubjectStatus.Instance.AddScore('U', vegetablesU);
     }
     public void Animal()//食事
     {
-        SubjectStatu.Instance.AddScore('H', animalH);
-        SubjectStatu.Instance.AddScore('M', animalM);
-        SubjectStatu.Instance.AddScore('T', animalT);
-        SubjectStatu.Instance.AddScore('U', animalU);
+        SubjectStatus.Instance.AddScore('H', animalH);
+        SubjectStatus.Instance.AddScore('M', animalM);
+        SubjectStatus.Instance.AddScore('T', animalT);
+        SubjectStatus.Instance.AddScore('U', animalU);
     }
     public void Snack()//食事
     {
-        SubjectStatu.Instance.AddScore('H', snackH);
-        SubjectStatu.Instance.AddScore('M', snackM);
-        SubjectStatu.Instance.AddScore('T', snackT);
-        SubjectStatu.Instance.AddScore('U', snackU);
+        SubjectStatus.Instance.AddScore('H', snackH);
+        SubjectStatus.Instance.AddScore('M', snackM);
+        SubjectStatus.Instance.AddScore('T', snackT);
+        SubjectStatus.Instance.AddScore('U', snackU);
     }
     public void SubjectClean()//清掃
     {
-        SubjectStatu.Instance.AddScore('H', subjectCleanH);
-        SubjectStatu.Instance.AddScore('M', subjectCleanM);
-        SubjectStatu.Instance.AddScore('T', subjectCleanT);
-        SubjectStatu.Instance.AddScore('U', subjectCleanU);
+        SubjectStatus.Instance.AddScore('H', subjectCleanH);
+        SubjectStatus.Instance.AddScore('M', subjectCleanM);
+        SubjectStatus.Instance.AddScore('T', subjectCleanT);
+        SubjectStatus.Instance.AddScore('U', subjectCleanU);
     }
     public void RoomClean()//清掃
     {
-        SubjectStatu.Instance.AddScore('H', roomCleanH);
-        SubjectStatu.Instance.AddScore('M', roomCleanM);
-        SubjectStatu.Instance.AddScore('T', roomCleanT);
-        SubjectStatu.Instance.AddScore('U', roomCleanU);
+        SubjectStatus.Instance.AddScore('H', roomCleanH);
+        SubjectStatus.Instance.AddScore('M', roomCleanM);
+        SubjectStatus.Instance.AddScore('T', roomCleanT);
+        SubjectStatus.Instance.AddScore('U', roomCleanU);
     }
     public void Present()//コミュニケーション
     {
-        SubjectStatu.Instance.AddScore('H', presentH);
-        SubjectStatu.Instance.AddScore('M', presentM);
-        SubjectStatu.Instance.AddScore('T', presentT);
-        SubjectStatu.Instance.AddScore('U', presentU);
+        SubjectStatus.Instance.AddScore('H', presentH);
+        SubjectStatus.Instance.AddScore('M', presentM);
+        SubjectStatus.Instance.AddScore('T', presentT);
+        SubjectStatus.Instance.AddScore('U', presentU);
     }
     public void Talk()//コミュニケーション
     {
-        SubjectStatu.Instance.AddScore('H', talkH);
-        SubjectStatu.Instance.AddScore('M', talkM);
-        SubjectStatu.Instance.AddScore('T', talkT);
-        SubjectStatu.Instance.AddScore('U', talkU);
+        SubjectStatus.Instance.AddScore('H', talkH);
+        SubjectStatus.Instance.AddScore('M', talkM);
+        SubjectStatus.Instance.AddScore('T', talkT);
+        SubjectStatus.Instance.AddScore('U', talkU);
     }
     public void Administrative()//コミュニケーション
     {
-        SubjectStatu.Instance.AddScore('H', administrativeH);
-        SubjectStatu.Instance.AddScore('M', administrativeM);
-        SubjectStatu.Instance.AddScore('T', administrativeT);
-        SubjectStatu.Instance.AddScore('U', administrativeU);
+        SubjectStatus.Instance.AddScore('H', administrativeH);
+        SubjectStatus.Instance.AddScore('M', administrativeM);
+        SubjectStatus.Instance.AddScore('T', administrativeT);
+        SubjectStatus.Instance.AddScore('U', administrativeU);
     }
     public void Blood()//検体採取
     {
-        SubjectStatu.Instance.AddScore('H', bloodH);
-        SubjectStatu.Instance.AddScore('M', bloodM);
-        SubjectStatu.Instance.AddScore('T', bloodT);
-        SubjectStatu.Instance.AddScore('U', bloodU);
+        SubjectStatus.Instance.AddScore('H', bloodH);
+        SubjectStatus.Instance.AddScore('M', bloodM);
+        SubjectStatus.Instance.AddScore('T', bloodT);
+        SubjectStatus.Instance.AddScore('U', bloodU);
     }
     public void Excrement()//検体採取
     {
-        SubjectStatu.Instance.AddScore('H', excrementH);
-        SubjectStatu.Instance.AddScore('M', excrementM);
-        SubjectStatu.Instance.AddScore('T', excrementT);
-        SubjectStatu.Instance.AddScore('U', excrementU);
+        SubjectStatus.Instance.AddScore('H', excrementH);
+        SubjectStatus.Instance.AddScore('M', excrementM);
+        SubjectStatus.Instance.AddScore('T', excrementT);
+        SubjectStatus.Instance.AddScore('U', excrementU);
     }
     public void Spit()//検体採取
     {
-        SubjectStatu.Instance.AddScore('H', spitH);
-        SubjectStatu.Instance.AddScore('M', spitM);
-        SubjectStatu.Instance.AddScore('T', spitT);
-        SubjectStatu.Instance.AddScore('U', spitU);
+        SubjectStatus.Instance.AddScore('H', spitH);
+        SubjectStatus.Instance.AddScore('M', spitM);
+        SubjectStatus.Instance.AddScore('T', spitT);
+        SubjectStatus.Instance.AddScore('U', spitU);
     }
     
 }

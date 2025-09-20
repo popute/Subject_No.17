@@ -1,9 +1,9 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class SubjectStatu : MonoBehaviour
+public class SubjectStatus : MonoBehaviour
 {
-    public static SubjectStatu Instance { get; private set; }
+    public static SubjectStatus Instance { get; private set; }
 
     void Awake()
     {
@@ -16,7 +16,7 @@ public class SubjectStatu : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    private Dictionary<char, int> status = new Dictionary<char, int>
+    public Dictionary<char, int> status = new Dictionary<char, int>
     {
         { 'H', 0 },
         { 'M', 0 },

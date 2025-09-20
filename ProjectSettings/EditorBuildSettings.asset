@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TalkScene.unity
     guid: b8c8de6b350f2bf4b8b54eb7568f23df
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: 3b4854c250e661648918da8b8ec1fdb3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
