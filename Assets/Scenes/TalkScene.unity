@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 567069820}
   - component: {fileID: 567069819}
+  - component: {fileID: 567069821}
   m_Layer: 0
   m_Name: testsubject
   m_TagString: Untagged
@@ -209,6 +210,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &567069821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567069818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d43cb2963543bc8489944d6fc2d3aa27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ImageManage
+  target: {fileID: 567069819}
+  spriteA: {fileID: 282289314691320592, guid: de4ca60a2ac497a4d9dd70e00b1dc289, type: 3}
+  spriteB: {fileID: 381891195291400031, guid: 78ccaf85085b2414883de17e40193b31, type: 3}
 --- !u!1 &992356668
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,6 +327,7 @@ MonoBehaviour:
           m_StringArgument: ManageScene
           m_BoolArgument: 0
         m_CallState: 2
+  image: {fileID: 567069821}
 --- !u!114 &992356674
 MonoBehaviour:
   m_ObjectHideFlags: 0

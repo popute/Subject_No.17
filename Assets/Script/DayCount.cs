@@ -23,6 +23,10 @@ public class DayCount : MonoBehaviour
         {
             // シーン起動時の処理
             dayCount++;
+        }else if (scene.name == "EndScene") // ← 特定シーン名を指定
+        {
+            dayCount = 0;
+            Debug.Log(dayCount);
         }
     }
 }

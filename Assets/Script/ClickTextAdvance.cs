@@ -9,14 +9,14 @@ public class ClickTextAdvance : MonoBehaviour
 {
     [SerializeField] private Text textLabel;      // Unity標準のText
     [SerializeField] private CSVLoader provider; // ← CSV読み込み側をInspectorで割り当て
-   
+
     [Header("イベント設定")]
     public UnityEvent onTextFinished;
 
     private string[] lines; // 行ごとの文章
     private int index = 0;  // 現在の行番号
     private DayCount day; // ← ここでは宣言だけ
-    private SubjectStatus s; // ← ここでは宣言だけ
+    private SubjectStatus s;
 
 
 
@@ -24,7 +24,6 @@ public class ClickTextAdvance : MonoBehaviour
     {
         day = FindObjectOfType<DayCount>(); // ← Awakeで探す
         s = FindObjectOfType<SubjectStatus>(); // ← Awakeで探す
-
     }
 
     void Start()
@@ -44,7 +43,7 @@ public class ClickTextAdvance : MonoBehaviour
         textLabel.text = "";  // 初期は空
         AppendLine();         // 最初の1行を表示
     }
-    
+
 
     void ChangeText()
     {
@@ -106,7 +105,7 @@ public class ClickTextAdvance : MonoBehaviour
         else
         {
             SceneManager.LoadScene("TalkScene");
-        } 
+        }
     }
     void ChangeTalk()
     {
@@ -183,15 +182,18 @@ public class ClickTextAdvance : MonoBehaviour
             {
                 string[] extra = provider.GetLines("Talk_H");
                 lines = lines.Concat(extra).ToArray();
-            }else if (s.status['U'] < 30)
+            }
+            else if (s.status['U'] < 30)
             {
                 string[] extra = provider.GetLines("Talk_U");
                 lines = lines.Concat(extra).ToArray();
-            }else if (s.status['M'] < 50)
+            }
+            else if (s.status['M'] < 50)
             {
                 string[] extra = provider.GetLines("Talk_M");
                 lines = lines.Concat(extra).ToArray();
-            }else if (s.status['T'] < 80)
+            }
+            else if (s.status['T'] < 80)
             {
                 string[] extra = provider.GetLines("Talk_T");
                 lines = lines.Concat(extra).ToArray();
@@ -204,15 +206,18 @@ public class ClickTextAdvance : MonoBehaviour
             {
                 string[] extra = provider.GetLines("Talk_H");
                 lines = lines.Concat(extra).ToArray();
-            }else if (s.status['U'] < 30)
+            }
+            else if (s.status['U'] < 30)
             {
                 string[] extra = provider.GetLines("Talk_U");
                 lines = lines.Concat(extra).ToArray();
-            }else if (s.status['M'] < 50)
+            }
+            else if (s.status['M'] < 50)
             {
                 string[] extra = provider.GetLines("Talk_M");
                 lines = lines.Concat(extra).ToArray();
-            }else if (s.status['T'] < 80)
+            }
+            else if (s.status['T'] < 80)
             {
                 string[] extra = provider.GetLines("Talk_T");
                 lines = lines.Concat(extra).ToArray();
@@ -251,7 +256,8 @@ public class ClickTextAdvance : MonoBehaviour
         if (index < lines.Length)
         {
             AppendLine();
-        } else if (sceneName == "TalkScene" && day.dayCount == 9)
+        }
+        else if (sceneName == "TalkScene" && day.dayCount == 9)
         {
             SceneManager.LoadScene("EndScene");
         }
@@ -266,4 +272,5 @@ public class ClickTextAdvance : MonoBehaviour
         string add = lines[index];
         textLabel.text = string.IsNullOrEmpty(textLabel.text) ? add : textLabel.text + "\n" + add;
     }
+    
 }
