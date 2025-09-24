@@ -1,8 +1,11 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+using System;
 
 public class SubjectStatus : MonoBehaviour
 {
+    Scene scene;
     public static SubjectStatus Instance { get; private set; }
     private DayCount day; // ← ここでは宣言だけ
 
@@ -41,14 +44,29 @@ public class SubjectStatus : MonoBehaviour
             Debug.LogWarning($"未定義のタイプ {type} にアクセスしました");
         }
     }
-    void Update()
+    private void OnSceneLoaded(Scene loadedScene, LoadSceneMode mode)
     {
-        if (day.dayCount == 9)
+        if (loadedScene.name == "EndScene")
         {
-            status['H'] = 0;
-            status['M'] = 0;
-            status['T'] = 0;
-            status['U'] = 0;
+            ResetStatus();
         }
+    }
+    public void ResetStatus()
+    {
+        status['H'] = 0;
+        status['M'] = 0;
+        status['T'] = 0;
+        status['U'] = 0;
+        Debug.Log("SubjectStatus: EndScene でステータスをリセットしました。");
+    }
+    void OnEnable()
+    {
+        // シーンがロードされたときに呼ばれるイベント
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    public static implicit operator SubjectStatus(BGMPlayer1 v)
+    {
+        throw new NotImplementedException();
     }
 }
